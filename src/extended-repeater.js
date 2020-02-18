@@ -1,9 +1,9 @@
 module.exports = function repeater( str, options = {} ) {
     var repeatStr = (options.hasOwnProperty("repeatTimes") && options["repeatTimes"] !== undefined) ? parseInt(options["repeatTimes"]) : 1;
-    var strSeparator = (options.hasOwnProperty("separator") && options["separator"] !== undefined) ? options["separator"] : "+";
-    var addition = (options.hasOwnProperty("addition") && options["addition"] !== undefined) ? (options["addition"] === null) ? "null" : options["addition"] : "";
+    var strSeparator = (options.hasOwnProperty("separator")) ? options["separator"] : "+";
+    var addition = (options.hasOwnProperty("addition")) ? (options["addition"] === null) ? "null" : options["addition"] : "";
     var additionRepeat = (options.hasOwnProperty("additionRepeatTimes") && options["additionRepeatTimes"] !== undefined) ? parseInt(options["additionRepeatTimes"]) : 1;
-    var additionSeparator = (options.hasOwnProperty("additionSeparator") && options["additionSeparator"] !== undefined) ? options["additionSeparator"] : "";
+    var additionSeparator = (options.hasOwnProperty("additionSeparator")) ? options["additionSeparator"] : "";
     var arrAdd = [addition];
     if (additionRepeat == 1) {
         str = str + addition;
